@@ -15,7 +15,10 @@ const Category = () =>{
   return (
       <div>
         <div className="adasd">
-          {section.map(o => <li><a href="#" ><RightOutlined />{o}</a></li>)}
+        <li><a href="#" ><RightOutlined />{section[0]}</a></li>
+        <li><a href="#" ><RightOutlined />{section[1]}</a></li>
+        <li><a href="#" ><RightOutlined />{section[2]}</a></li>
+        <li><a href="#" ><RightOutlined />{section[3]}</a></li>
         </div>
       </div>
     ); 
