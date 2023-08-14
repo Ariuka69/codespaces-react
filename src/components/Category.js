@@ -13,12 +13,12 @@ const Category = () =>{
     Api()
   },[])
   return (
-      <div>
+      <div className="categ">
         <div className="adasd">
-        <li><a href="#" ><RightOutlined />{section[0]}</a></li>
-        <li><a href="#" ><RightOutlined />{section[1]}</a></li>
-        <li><a href="#" ><RightOutlined />{section[2]}</a></li>
-        <li><a href="#" ><RightOutlined />{section[3]}</a></li>
+        <li><button><RightOutlined />{section[0]}</button></li>
+        <li><button><RightOutlined />{section[1]}</button></li>
+        <li><button><RightOutlined />{section[2]}</button></li>
+        <li><button><RightOutlined />{section[3]}</button></li>
         </div>
       </div>
     ); 

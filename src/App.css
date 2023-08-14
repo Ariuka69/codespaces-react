@@ -5,6 +5,9 @@
   align-items: center;
   background-color: rgb(29, 93, 155);
 }
+.main {
+  display: flex;
+}
 .Sags {
   margin: 10px 30px;
   height: 40px;
@@ -18,4 +21,37 @@
 }
 .header li {
   list-style: none;
+}
+.Baraa{
+  height: 410px;
+  width: 200px;
+  margin: 10px 10px;
+  border: 0.5px solid rgb(196, 196, 196);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Baraa h4 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.Baraa p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.niit {
+  display: flex;
+  flex-wrap: wrap;
+}
+img {
+  height: 180px;
+  width: 180px;
+}
+.categ {
+  width: 900px;
 }

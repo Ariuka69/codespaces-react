@@ -3,10 +3,12 @@
     margin: 10px 10px;
     height: 20px;
 }
-.adasd a {
+.adasd button {
     color: black;
-    text-decoration: none;
+    border: none;
     font-size: 20px;
+    background-color: white;
+    cursor: pointer;
 }
 .adasd {
     display: flex;
