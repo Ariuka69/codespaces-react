@@ -1,6 +1,6 @@
 import React, {useEffect, useState } from "react";
 
-const MensBaraa = () => {
+const Baraa = () => {
   const [sectn, setSectn] = useState([]);
     const Ap = async () => {
         const i = await fetch("https://fakestoreapi.com/products");
@@ -8,13 +8,12 @@ const MensBaraa = () => {
         console.log(a);
         setSectn(a);
       };
-    useEffect(() =>{
-        Ap()
-    },[]);
-    console.log({sectn});
+  useEffect(() =>{
+    Ap()
+},[]);
     return (
         <>
-        <div className="niit">
+        <div className="nii">
           {sectn.map(o => 
           <div className="Baraa">
             <img src={o.image}/>
@@ -24,7 +23,8 @@ const MensBaraa = () => {
             <button>About</button>
           </div>)}
         </div>
+        
         </>
     );
 }
-export default MensBaraa;
+export default Baraa;

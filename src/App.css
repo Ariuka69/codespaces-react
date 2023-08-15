@@ -8,6 +8,9 @@
 .mai {
   display: flex;
 }
+.categ {
+  width: 300px;
+}
 .Sags {
   margin: 10px 30px;
   height: 40px;
@@ -45,6 +48,10 @@
   margin-right: 5px;
 }
 .niit {
+  display: flex;
+  flex-wrap: wrap;
+}
+.nii {
   width: 1603px;
   display: flex;
   flex-wrap: wrap;
@@ -53,10 +60,9 @@ img {
   height: 180px;
   width: 180px;
 }
-.categ {
-  width: 300px;
-}
+
 .popup {
+  background-color: rgb(244, 209, 96);
   height: 500px;
   width: 750px;
   border: 1px solid black;
@@ -75,6 +81,11 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 .m {
   margin-left: 5px;
