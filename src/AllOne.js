@@ -22,34 +22,34 @@ const AllOne = () => {
   };
 
   return (
-  <div className="main">
-    <div className="header">
-      <li><a href="#">Logo</a></li>
-      <button className="Sags" onClick={toggleModal}><ShoppingCartOutlined />Сагс</button>
-    </div>
-    <div className="mai">
-      <div className="niit">
-        <Category />
-        {modal && (
-          <div className="popup1">
-            <div className="popup">
-              <div className="n"><img src={set.image} /></div>
-              <li></li>
-              <div className="m">
-                <p>Үнэ</p>
-                <h4>{set.price}$</h4>
-                {set.description} <br/>
-                <button>Sagsand Hiih</button>
+    <div className="main">
+      <div className="header">
+        <li><a href="#">Logo</a></li>
+        <button className="Sags" onClick={toggleModal}><ShoppingCartOutlined />Сагс</button>
+      </div>
+      <div className="mai">
+        <div className="niit">
+          <Category />
+          {modal && (
+            <div className="popup1">
+              <div className="popup">
+                <div className="n"><img src={set.image} /></div>
+                <li></li>
+                <div className="m">
+                  <p>Үнэ</p>
+                  <h4>{set.price}$</h4>
+                  {set.description} <br />
+                  <button>Sagsand Hiih</button>
+                </div>
+                <button className="close-btn" onClick={toggleModal}><CloseOutlined /></button>
               </div>
-              <button className="close-btn" onClick={toggleModal}><CloseOutlined /></button>
             </div>
-          </div>
           )}
-        <Baraa />
+          <Baraa />
+        </div>
       </div>
     </div>
-  </div>
   );
-};
+}
  
 export default AllOne;
