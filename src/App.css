@@ -1,3 +1,7 @@
+#main {
+  display: flex;
+  flex-direction: column;
+}
 .header {
   height: 100px;
   display: flex;
@@ -26,33 +30,39 @@
   list-style: none;
 }
 .Baraa{
-  height: 410px;
-  width: 200px;
+  height: 430px;
+  width: 249px;
   margin: 10px 10px;
   border: 0.5px solid rgb(196, 196, 196);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
 }
-.Baraa h4 {
+.Baraa div {
+  margin-top: 20px;
+}
+.Baraa div h4 {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 5px;
   margin-right: 5px;
 }
-.Baraa p {
+.Baraa div p {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 5px;
   margin-right: 5px;
+}
+.Baraa button {
+  margin-bottom: 20px;
 }
 .niit {
   display: flex;
   flex-wrap: wrap;
 }
 .nii {
-  width: 1603px;
+  /*width: 1603px;*/
   display: flex;
   flex-wrap: wrap;
 }
@@ -111,6 +121,41 @@ img {
   margin-top: 20px;
 }
 .close-btn {
+  height: 29.33px;
+  width: 29.33px;
+  border: none;
+  border-radius: 14.665px;
+  cursor: pointer;
+}
+.id {
+  color: white;
+}
+.adasd li {
+  list-style: none;
+  margin: 10px 10px;
+  height: 20px;
+}
+.adasd button {
+  color: black;
+  border: none;
+  font-size: 20px;
+  background-color: white;
+  cursor: pointer;
+}
+.adasd {
+  display: flex;
+  flex-direction: column;
+
+}
+.SagsMenu {
+  position: absolute;
+  background-color: rgb(244, 209, 96);
+  height: 100vh;
+  width: 100vw;
+}
+.closeBtn {
+  position: fixed;
+  right: 0%;
   height: 29.33px;
   width: 29.33px;
   border: none;

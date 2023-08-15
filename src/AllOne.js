@@ -1,54 +1,66 @@
 import React, {useState , useEffect} from "react";
-import {CloseOutlined , ShoppingCartOutlined } from "@ant-design/icons";
-import Category from "./components/Category";
+import {ShoppingCartOutlined, CloseOutlined} from "@ant-design/icons";
+import Popup from "./components/Popup";
 import Baraa from "./components/Baraa";
 
 const AllOne = () => {
-  const [set, setSet] = useState([]);
+  const [items, setSectn] = useState([]);
+    const Ap = async () => {
+        const i = await fetch("https://fakestoreapi.com/products");
+        const a = await i.json();
+        console.log(a);
+        setSectn(a);
+      };
+  useEffect(() =>{
+    Ap()
+},[]);
+//Props to Popup
+const [selectedItem, setSelectedItem] = useState(null);
 
-  const Api = async () => {
-    const i = await fetch("https://fakestoreapi.com/products/1");
-    const a = await i.json();
-    console.log(a);
-    setSet(a);
+  const handleItemClick = (item) => {
+    setSelectedItem(item);
   };
-  useEffect(() => {
-    Api();
-  }, []);
-  const [modal, setModal] = useState(false);
+
+  const handleClosePopup = () => {
+    setSelectedItem(null);
+  };
+//Sags haruulna
+  const [basket, setBasket] = useState(false);
 
   const toggleModal = () => {
-    setModal(!modal);
+    setBasket(!basket);
+    document.getElementById('main').style.display='none';
+  };
+  const untoggleModal = () => {
+    setBasket(!basket);
+    document.getElementById('main').style.display='flex';
   };
 
-  return (
-    <div className="main">
-      <div className="header">
-        <li><a href="#">Logo</a></li>
-        <button className="Sags" onClick={toggleModal}><ShoppingCartOutlined />Сагс</button>
-      </div>
-      <div className="mai">
-        <div className="niit">
-          <Category />
-          {modal && (
-            <div className="popup1">
-              <div className="popup">
-                <div className="n"><img src={set.image} /></div>
-                <li></li>
-                <div className="m">
-                  <p>Үнэ</p>
-                  <h4>{set.price}$</h4>
-                  {set.description} <br />
-                  <button>Sagsand Hiih</button>
-                </div>
-                <button className="close-btn" onClick={toggleModal}><CloseOutlined /></button>
-              </div>
-            </div>
-          )}
-          <Baraa />
+return (<>
+      {basket && (
+          <div className="SagsMenu">
+            <button className="closeBtn" onClick={untoggleModal}><CloseOutlined /></button>
+          </div>
+      )}
+      <div id="main">
+        <div className="header">
+          <li><a>Logo</a></li>
+          <button className="Sags" onClick={toggleModal} ><ShoppingCartOutlined />Сагс</button>
+        </div>
+        <div className="mai">
+         {selectedItem && (
+            <Popup item={selectedItem} onClose={handleClosePopup} />
+         )}
+
+          <div className="nii">
+          {items.map((item) => (
+          <Baraa key={item.id} item={item} onItemClick={handleItemClick} />
+          ))}
+          </div>
+          
         </div>
       </div>
-    </div>
+    </>
   );
 }
  

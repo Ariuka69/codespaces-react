@@ -1,29 +1,19 @@
-import React, {useEffect, useState } from "react";
+import React from "react";
 
-const Baraa = () => {
-  const [sectn, setSectn] = useState([]);
-    const Ap = async () => {
-        const i = await fetch("https://fakestoreapi.com/products");
-        const a = await i.json();
-        console.log(a);
-        setSectn(a);
-      };
-  useEffect(() =>{
-    Ap()
-},[]);
+const Baraa = ({ item, onItemClick }) => {
     return (
         <>
         <div className="nii">
-          {sectn.map(o => 
           <div className="Baraa">
-            <img src={o.image}/>
-            <h4>{o.title}</h4>
-            <p>{o.category}</p>
-            <p>{o.price}$</p>
-            <button>About</button>
-          </div>)}
+            <div>
+              <img src={item.image}/>
+              <h4>{item.title}</h4>
+              <p>{item.category}</p>
+              <p>{item.price}$</p>
+              </div>
+            <button onClick={() => onItemClick(item)}>About</button>
+          </div>
         </div>
-        
         </>
     );
 }
