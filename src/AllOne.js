@@ -3,7 +3,7 @@ import {CloseOutlined , ShoppingCartOutlined } from "@ant-design/icons";
 import Category from "./components/Category";
 import Baraa from "./components/Baraa";
 
-const All = () => {
+const AllOne = () => {
   const [set, setSet] = useState([]);
 
   const Api = async () => {
@@ -52,4 +52,4 @@ const All = () => {
   );
 };
  
-export default All;
+export default AllOne;

@@ -1,12 +1,12 @@
 import React from "react";
 import "./App.css";
-import All from "./All";
+import AllOne from "./AllOne";
 
 const App = () => {
   
   return ( 
     <>
-      <All/>
+      <AllOne/>
     </>
    );
 };
