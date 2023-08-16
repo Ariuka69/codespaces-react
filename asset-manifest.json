@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Ariuka69/codespaces-react.git/static/css/main.9ad66e22.css",
-    "main.js": "/Ariuka69/codespaces-react.git/static/js/main.99597fdb.js",
-    "static/js/496.0320d045.chunk.js": "/Ariuka69/codespaces-react.git/static/js/496.0320d045.chunk.js",
-    "index.html": "/Ariuka69/codespaces-react.git/index.html",
-    "main.9ad66e22.css.map": "/Ariuka69/codespaces-react.git/static/css/main.9ad66e22.css.map",
-    "main.99597fdb.js.map": "/Ariuka69/codespaces-react.git/static/js/main.99597fdb.js.map",
-    "496.0320d045.chunk.js.map": "/Ariuka69/codespaces-react.git/static/js/496.0320d045.chunk.js.map"
+    "main.css": "/codespaces-react/static/css/main.9ad66e22.css",
+    "main.js": "/codespaces-react/static/js/main.668d1782.js",
+    "static/js/496.0320d045.chunk.js": "/codespaces-react/static/js/496.0320d045.chunk.js",
+    "index.html": "/codespaces-react/index.html",
+    "main.9ad66e22.css.map": "/codespaces-react/static/css/main.9ad66e22.css.map",
+    "main.668d1782.js.map": "/codespaces-react/static/js/main.668d1782.js.map",
+    "496.0320d045.chunk.js.map": "/codespaces-react/static/js/496.0320d045.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9ad66e22.css",
-    "static/js/main.99597fdb.js"
+    "static/js/main.668d1782.js"
   ]
 }
