@@ -2,6 +2,7 @@ import React, {useState , useEffect} from "react";
 import {ShoppingCartOutlined, CloseOutlined} from "@ant-design/icons";
 import Popup from "./components/Popup";
 import Baraa from "./components/Baraa";
+import Sags from "./components/Sags";
 
 const AllOne = () => {
   const [items, setSectn] = useState([]);
@@ -36,31 +37,44 @@ const [selectedItem, setSelectedItem] = useState(null);
     document.getElementById('main').style.display='flex';
   };
 
-return (<>
+  const [prod, setProd] = useState([]);
+  const handleAddCart = (item) => {
+    setProd([...prod,item])
+  };
+  console.log({prod});
+return (
+<div>
       {basket && (
-          <div className="SagsMenu">
-            <button className="closeBtn" onClick={untoggleModal}><CloseOutlined /></button>
+        <div id="SagsMenu">
+           {prod.map(prod =>
+          <div className="Product">
+            <img src={prod.image} alt="img"/>
+            <h3>{prod.title}</h3>
+            <p>{prod.price}</p>
+            <button>remove</button>
           </div>
+           )}
+        <button className="closeBtn" onClick={untoggleModal}><CloseOutlined /></button>
+      </div>
       )}
-      <div id="main">
+      
+    <div id="main">
         <div className="header">
           <li><a>Logo</a></li>
           <button className="Sags" onClick={toggleModal} ><ShoppingCartOutlined />Сагс</button>
         </div>
         <div className="mai">
          {selectedItem && (
-            <Popup item={selectedItem} onClose={handleClosePopup} />
+            <Popup item={selectedItem} onClose={handleClosePopup} OnItemClick={handleAddCart}/>
          )}
-
-          <div className="nii">
+        </div>
+        <div className="nii">
           {items.map((item) => (
           <Baraa key={item.id} item={item} onItemClick={handleItemClick} />
           ))}
-          </div>
-          
         </div>
       </div>
-    </>
+  </div>
   );
 }
  

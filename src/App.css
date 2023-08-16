@@ -147,7 +147,7 @@ img {
   flex-direction: column;
 
 }
-.SagsMenu {
+#SagsMenu {
   position: absolute;
   background-color: rgb(244, 209, 96);
   height: 100vh;
@@ -156,9 +156,33 @@ img {
 .closeBtn {
   position: fixed;
   right: 0%;
+  top: 0%;
   height: 29.33px;
   width: 29.33px;
   border: none;
   border-radius: 14.665px;
   cursor: pointer;
+}
+.Product img {
+  height: 100px;
+  width: 100px;
+  margin-right: 50px;
+}
+.Product {
+  border: 1px solid black;
+  width: 700px;
+  height: 120px;
+  margin-top: 50px;
+
+  display: flex;
+  align-items: center;
+}
+.Product button {
+  height: 50px;
+  margin: 50px 10px;
+  position: fixed;
+  right: 50%;
+}
+.Product h3 {
+  margin: 70px 50px;
 }
