@@ -42,6 +42,11 @@ const [selectedItem, setSelectedItem] = useState(null);
     setProd([...prod,item])
   };
   console.log({prod});
+
+  const removeCartItem = (itemId) => {
+    const updatedCart = prod.filter(item => item.id !== itemId);
+    setProd(updatedCart);
+  };
 return (
 <div>
       {basket && (
@@ -50,8 +55,8 @@ return (
           <div className="Product">
             <img src={prod.image} alt="img"/>
             <h3>{prod.title}</h3>
-            <p>{prod.price}</p>
-            <button>remove</button>
+            <p>{prod.price}$</p>
+            <button onClick={() => {removeCartItem(prod.id)}}>remove</button>
           </div>
            )}
         <button className="closeBtn" onClick={untoggleModal}><CloseOutlined /></button>
@@ -70,7 +75,7 @@ return (
         </div>
         <div className="nii">
           {items.map((item) => (
-          <Baraa key={item.id} item={item} onItemClick={handleItemClick} />
+          <Baraa key={item.id} item={item} onItemClick={handleItemClick} itm={selectedItem} OnItemClick={handleAddCart} />
           ))}
         </div>
       </div>

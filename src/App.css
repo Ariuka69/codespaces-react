@@ -40,7 +40,7 @@
   justify-content: space-between;
 }
 .Baraa div {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 .Baraa div h4 {
   margin-top: 5px;
@@ -149,8 +149,6 @@ img {
 }
 #SagsMenu {
   position: absolute;
-  background-color: rgb(244, 209, 96);
-  height: 100vh;
   width: 100vw;
 }
 .closeBtn {
@@ -166,23 +164,37 @@ img {
 .Product img {
   height: 100px;
   width: 100px;
-  margin-right: 50px;
+  margin-right: 25px;
+  margin-left: 50px;
 }
 .Product {
+  margin-left: 50px;
+  background: linear-gradient(90deg, rgba(244,210,98,1) 0%, rgba(251,238,172,1) 50%, rgba(117,194,246,1) 100%);
   border: 1px solid black;
   width: 700px;
-  height: 120px;
+  height: 150px;
   margin-top: 50px;
+  margin-bottom: 10px;
 
   display: flex;
   align-items: center;
 }
 .Product button {
   height: 50px;
-  margin: 50px 10px;
-  position: fixed;
-  right: 50%;
 }
 .Product h3 {
-  margin: 70px 50px;
+  margin: 50px 30px;
+  height: auto;
+  width: 280px;
+}
+.Product p {
+  margin: 20px 20px;
+  width: 56px;
+}
+.SagsandHiih {
+  margin-bottom: 20px;
+}
+.a2 {
+  display: flex;
+  flex-direction: column;
 }
