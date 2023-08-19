@@ -3,15 +3,23 @@
   flex-direction: column;
 }
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: rgb(29, 93, 155);
 }
-.mai {
+.headerSticky {
+  height: 100px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(29, 93, 155);
 }
+
 .categ {
   width: 300px;
 }
@@ -77,8 +85,13 @@ img {
   width: 750px;
   border: 1px solid black;
   border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 
   display: flex;
+  align-items: start;
 }
 .popup li {
   list-style: none;
@@ -197,4 +210,64 @@ img {
 .a2 {
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 600px) {
+  .Product img {
+    height: 100px;
+    width: 100px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  .Product {
+    margin-left: 10px;
+    width: 95vw;
+    height: 150px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .Product button {
+    height: 50px;
+    margin-right: 0px;
+  }
+  .Product h3 {
+    margin: 0px 0px;
+    height: 100px;
+    width: 100px;
+    overflow: auto;
+  }
+  .Product p {
+    margin: 5px 20px;
+    width: 56px;
+  }
+
+  .Baraa{
+    height: 300px;
+    width: 20vh;
+    margin: 10px 10px;
+    border: 0.5px solid rgb(196, 196, 196);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .Baraa div {
+    margin-top: 0px;
+  }
+  .Baraa div h4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 58.8px;
+    overflow: auto;
+  }
+  img {
+    height: 150px;
+    width: 150px;
+  }
+  .a2 {
+    display: flex;
+    flex-direction: row;
+  }
 }
